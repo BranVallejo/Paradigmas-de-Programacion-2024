@@ -1,0 +1,73 @@
+Puntos para ver:	
+    Pinky y cerebro
+        punto 5
+
+    casa de pdp: 
+        el 6 mepa
+
+    power rangers: 
+        el 3!!! (usa ZipWith)
+        la que hice en el 5 está copada
+
+    mini-golfito:
+        notacion: nombre (edad asd) _ asdas _
+
+    carreras:
+        el de modificar velocidad
+
+Hacer: 
+    COPIAR EL FOLDL1 DE minigolfito DE LU o el de thanos
+    
+Conceptos:
+
+    Manipular tuplas
+
+    Manejar bien la notacion: (x:y)
+
+    funcion lambda
+
+    Manejar bien la notacion: nombre (edad asd) _ asdas _
+    Creo que Lu en su resolucion de laCasaDePdp la usa
+    y yo en el Mini-golfito
+
+    forzar unas opciones limitadas como el de heroes de leyenda
+
+
+
+muchas transformaciones
+hacer una funcion de "maximo según" con foldl1
+Fold >>>> Recursividad
+orden superior >>>> 
+
+
+
+Cuando busco un string en una lista usar elem
+invasionDeSuciosDuendes unBarbaro =  elem "Escribir poesía atroz" . habilidad $ unBarbaro
+
+
+Tips para el parcial:
+
+    Hacer siempre al inicio las funciones básicas para modificar parámetros. 
+    Ej aumentarFuerza, modificar Fuerza
+
+    usar bien elem
+        ej: all (`elem` (apodo unPokemon)) "aeiou"
+
+    Consejos de July:
+
+        Convenciones de nombres: Favorecé
+            Infinitivo para funciones que "tienen efecto".
+            Para funciones que devuelven booleanos, que el nombre se lea como una pregunta. (Por ejemplo esElRojo en vez de serElRojo)
+            Sustantivos que describan lo que devuelven para el resto. (ssssssssssss en vez de calcularNivelDePelea)
+        Tenés un par de sobredelegaciones: esBueno es la misma función que buena, y sacarPoder es la misma función que nivelDePelea.
+        or . map unaCondicion = any unaCondicion (la segunda opción es más declarativa)
+        maximumBy se podría definir un poco más declarativa usando fold.
+        En alfa5 para obtener una lista infinita de un único valor tenés la función repeat (preferible a cycle con una lista de un elemento)
+        En rangerLider y chicaLider podrías usar pattern matching y separar la lista en cabeza y cola en vez de usar head, pero tanto no importa.
+        Las funciones para chicas superpoderosas repiten lógica con las de power rangers, peeeero casi seguro de que la idea de esos puntos era que modelaran los datos con tuplas en vez de datas, cosa que se deprecó hace tiempo, así que tampoco lo reprocharía.
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+6.1
+-- Tenemos una lista de Eventos, vamos a mapearla y cada elemento se le aplica
+--  primero se le aplica a una ciudad. Nos queda una ciudad.
+--  a esa ciudad se le aplica la funcion costoDeVida.
+--  Entonces nos queda una lista de costos de vida.
+
+--  A esa lista la evaluamos con estaOrdenadoDeMenorAMayorNumeros}
+-- Nos da el booleano 

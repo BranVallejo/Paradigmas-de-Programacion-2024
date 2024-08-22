@@ -1,0 +1,17 @@
+-- Modelo inicial
+data Jugador = Jugador {
+  nombre :: String,
+  padre :: String,
+  habilidad :: Habilidad
+} deriving (Eq, Show)
+
+data Habilidad = Habilidad {
+  fuerzaJugador :: Int,
+  precisionJugador :: Int
+} deriving (Eq, Show)
+
+data Tiro = Tiro {
+  velocidad :: Int,
+  precision :: Int,
+  altura :: Int
+} deriving (Eq, Show)
