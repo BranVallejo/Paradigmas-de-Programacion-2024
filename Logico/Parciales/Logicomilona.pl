@@ -138,7 +138,7 @@ esMichelinero(Restaurante):- tieneEstilo(Restaurante, italiano(5)).
 esMichelinero(Restaurante):- 
     tieneEstilo(Restaurante, mexicano(Ingredientes)),
     member(habanero, Ingredientes),
-    member(habanero, rocoto).
+    member(rocoto, Ingredientes).
 
 % 6)
 tieneMayorRepertorio(UnRestaurante, OtroRestaurante) :-
