@@ -204,4 +204,4 @@ mesAcuatico(diciembre).
 mesAcuatico(enero).
 mesAcuatico(febrero).
 mesAcuatico(marzo).
-
+% falta la ultima condicion
