@@ -194,7 +194,7 @@ opcionesDeEntretenimiento(Visitante, Mes, MontaniaRusa) :-
 
 opcionesDeEntretenimiento(Visitante, Mes, Acuatica) :-
     visitante(Visitante), mes(Mes),
-    atraccion(Acuatica, _),
+    atraccion(Acuatica, acuatica),
     mesAcuatico(mes).
 
 mesAcuatico(septiembre).
