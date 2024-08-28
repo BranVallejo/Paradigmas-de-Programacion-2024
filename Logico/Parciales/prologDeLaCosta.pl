@@ -33,6 +33,9 @@ atraccion(abismoMortalRecargada, montaniaRusa(3, 134)).
 atraccion(paseoPorElBosque, montaniaRusa(0, 45)).
 
 % Tipo: acuatica()
+atraccion(elTorpedoSalpicon, acuatica).
+atraccion(esperoQueHayasTraidoOtraMudaDeRopa, acuatica).
+
 
 % MODELADO DE VISITANTES
 % visitante(Visitante,Edad, Dinero).
@@ -183,4 +186,22 @@ opcionesDeEntretenimiento(Visitante, Mes, AtraccionIntensa) :-
 opcionesDeEntretenimiento(Visitante, Mes, AtraccionIntensa) :-
     visitante(Visitante), mes(Mes),
     atraccion(AtraccionIntensa, intensa(_)).
+
+opcionesDeEntretenimiento(Visitante, Mes, MontaniaRusa) :-
+    visitante(Visitante), mes(Mes),
+    atraccion(MontaniaRusa, montaniaRusa(_, _)),
+    not(montaniaRusaPeligrosa(Visitante, MontaniaRusa)).
+
+opcionesDeEntretenimiento(Visitante, Mes, Acuatica) :-
+    visitante(Visitante), mes(Mes),
+    atraccion(Acuatica, _),
+    mesAcuatico(mes).
+
+mesAcuatico(septiembre).
+mesAcuatico(octubre).
+mesAcuatico(noviembre).
+mesAcuatico(diciembre).
+mesAcuatico(enero).
+mesAcuatico(febrero).
+mesAcuatico(marzo).
 
