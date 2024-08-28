@@ -179,6 +179,17 @@ opcionesDeEntretenimiento(Visitante, Mes, AtraccionTranqui) :-
     visitante(Visitante), mes(Mes), not(esChico(Visitante)),
     atraccion(AtraccionTranqui, tranquila(todos)).
 
+opcionesDeEntretenimiento(Visitante, Mes, AtraccionTranqui) :-
+    visitante(Visitante), mes(Mes), not(esChico(Visitante)),
+    acompaniaAUnChicoEnElGrupo(Visitante),
+    atraccion(AtraccionTranqui, _).
+
+acompaniaAUnChicoEnElGrupo(Visitante) :-
+    visitante(Visitante),
+    perteneceA(Visitante, UnGrupo),
+    perteneceA(Chico, UnGrupo),
+    esChico(Chico).
+
 opcionesDeEntretenimiento(Visitante, Mes, AtraccionIntensa) :-
     visitante(Visitante), mes(Mes),
     atraccion(AtraccionIntensa, intensa(_)).
@@ -205,3 +216,4 @@ mesAcuatico(enero).
 mesAcuatico(febrero).
 mesAcuatico(marzo).
 % falta la ultima condicion
+
