@@ -59,22 +59,27 @@ tieneAtraccion(villaPehuenia, bateaMahuida).
 tieneAtraccion(villaPehuenia, moquehue).
 tieneAtraccion(villaPehuenia, alumine).
 
-
-%                                           [3]
+%                                           [3] 
+% ninguno lo cumple, modifique la base para probarlo.
+% tieneAtraccion(bariloche, losAlerces). Agregué eso
 
 vacacionesCopadas(Viajero) :-
     viajero(Viajero),
     forall(viajaA(Viajero, Destino), tieneUnaAtraccionCopada(Destino)).
 
 tieneUnaAtraccionCopada(Destino) :- 
-    tieneAtraccion(Destino, Atraccion), atraccionCopada(Atraccion).
+    tieneAtraccion(Destino, NombreAtraccion), 
+    atraccion(NombreAtraccion, Atraccion),
+    atraccionCopada(Atraccion).
 
-atraccionCopada(Atraccion) :- atraccion(Atraccion, cerro(Altura)), Altura > 2000.
-atraccionCopada(Atraccion) :- atraccion(Atraccion, cuerpoDeAgua(_, sePuedePescar, _)).
-atraccionCopada(Atraccion) :- atraccion(Atraccion, cuerpoDeAgua(_, _, Temperatura)), Temperatura > 20.
-atraccionCopada(Atraccion) :- atraccion(Atraccion, playa(Diferencia)), Diferencia < 5.
-atraccionCopada(Atraccion) :- atraccion(Atraccion, excursion(Nombre)), length(Nombre, Largo), Largo > 7.
-atraccionCopada(Atraccion) :- atraccion(Atraccion, parqueNacional()).
+atraccionCopada(cerro(Altura)) :- Altura > 2000.
+atraccionCopada(cuerpoDeAgua(_, sePuedePescar, _)).
+atraccionCopada(cuerpoDeAgua(_, _, Temperatura)) :-  Temperatura > 20.
+atraccionCopada(playa(Diferencia)) :- Diferencia < 5.
+atraccionCopada(excursion(Nombre)) :- length(Nombre, Largo), Largo > 7.
+atraccionCopada(parqueNacional()).
+
+
 
 
 %                                           [4]
