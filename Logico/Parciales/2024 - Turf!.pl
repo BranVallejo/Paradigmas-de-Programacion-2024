@@ -60,17 +60,13 @@ premioImportante(granPremioRepublica).
 %                                               [5]
 % Ej Resultado: [botafogo, oldMan, yatasto, energica]
 apuestaGanadora(Apuesta, Resultado) :-
-    ganaLaApuesta(Apuesta, Resultado).
+    apuesta(Apuesta, Detalle),
+    ganaLaApuesta(Apuesta, Detalle, Resultado).
 
-ganaLaApuesta(aGanador, Resultado) :- apuesta(aGanador, detalle(UnCaballo)), salePrimero(UnCaballo, Resultado).
-ganaLaApuesta(aSegundo, Resultado) :- apuesta(aSegundo, detalle(UnCaballo)), saleSegundo(UnCaballo, Resultado).
-
-ganaLaApuesta(exacta, Resultado) :- apuesta(exacta, detalle(UnCaballo, OtroCaballo)), 
-    salePrimero(UnCaballo, Resultado), saleSegundo(OtroCaballo, Resultado).
-
-ganaLaApuesta(imperfecta, Resultado) :- apuesta(imperfecta, detalle(UnCaballo, OtroCaballo)), 
-    salePrimeroOSegundo(UnCaballo, Resultado), 
-    salePrimeroOSegundo(OtroCaballo, Resultado).
+ganaLaApuesta(aGanador, detalle(UnCaballo), Resultado) :- salePrimero(UnCaballo, Resultado).
+ganaLaApuesta(aSegundo, detalle(UnCaballo), Resultado) :- saleSegundo(UnCaballo, Resultado).
+ganaLaApuesta(exacta, detalle(UnCaballo, OtroCaballo), Resultado) :- salePrimero(UnCaballo, Resultado), saleSegundo(OtroCaballo, Resultado).
+ganaLaApuesta(imperfecta, detalle(UnCaballo, OtroCaballo), Resultado) :- salePrimeroOSegundo(UnCaballo, Resultado), salePrimeroOSegundo(OtroCaballo, Resultado).
 
 % apuesta(aGanador, detalle(Caballo)).
 % apuesta(aSegundo, detalle(Caballo)).
