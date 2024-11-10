@@ -1,0 +1,10 @@
+import src.usuario.*
+import src.vehiculo.*
+import src.zona.*
+import src.app.*
+describe "group of tests for pepita" {
+
+  test "pepita has initial energy" {
+  }
+
+}
