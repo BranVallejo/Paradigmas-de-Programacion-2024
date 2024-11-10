@@ -26,7 +26,7 @@ class Usuario {
   }  
 
   method puedePagarCarga(unosLitros) {
-    if ( !self.puedePagar(shell.precioCombustible()) ){
+    if ( !self.puedePagar(shell.precioFinal(unosLitros)) ){
       throw new DomainException ( message = "No tenés dinero suficiente.")
     }
   }
