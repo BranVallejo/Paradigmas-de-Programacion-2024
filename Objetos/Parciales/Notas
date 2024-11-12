@@ -1,0 +1,37 @@
+Hechos:
+	Jalowin
+	Waza
+	Fiesta de disfraces
+	
+Siguientes:
+	Simulacro
+	Computadoras Pelado
+	Among us
+	Yaar
+	https://github.com/julian-berbel/intensamente
+	
+Por hacer:
+	Siguiente parcial
+	Instalar wollok en la laptop de Agos
+	Ver como resolver "intercambioDeTrajes" en FiestaDeDisfraces
+	Ver como funciona el sortBy
+	Descargar el git en la laptop de agos
+	ver para que es flatten(), aplanar
+	
+
+Plan hoy general:
+	Ver correcciones
+	Hacer Simulacro
+	Hacer Computadoras
+	Arreglar Waza
+	
+Tener en mente:
+	* Si le pido un valor a un objeto para hacer cuentas, la estoy cagando
+	*  puedePagarCarga() Parece ser un método que devuelve un valor booleano, no que se use para validar y lanzar un error.
+	   validarDineroSuficiente/1 Un mejor nombre
+    * Usá la sintaxis method unMetodo() = unValor sólo si es un método que devuelve, no para métodos que tienen efecto. 
+        *  MAL: method pagarMultas() = usuarios.forEach({ usuario => usuario.pagarLasMultas() }) 
+	https://www.wollok.org/documentation/language/#wollok.lang.Range
+
+Métodos raros
+	unaDescripcion.endsWith("?")

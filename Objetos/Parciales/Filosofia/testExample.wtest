@@ -1,0 +1,10 @@
+import src.actividad.*
+import src.filosofo.*
+
+describe "group of tests for pepita" {
+
+  test "pepita has initial energy" {
+    
+  }
+
+}
