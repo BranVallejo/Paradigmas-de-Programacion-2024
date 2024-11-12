@@ -1,0 +1,10 @@
+import src.barco.*
+import src.mision.*
+
+describe "group of tests for pepita" {
+
+  test "pepita has initial energy" {
+    assert.equals(100, pepita.energy())
+  }
+
+}
