@@ -43,6 +43,20 @@ class Barco {
     tripulante => tripulante.estaPasadoDeGrogXD()
   })
 
+  method pasadosDeGrogXD() = tripulacion.filter({ pirata => pirata.estaPasadoDeGrogXD() })
+
+  // 5)a)
+  method cuantosPasadosDeGrogXD() = self.pasadosDeGrogXD().size()
+
+  // 5)b)
+  method cuantosItemsDistintos(unaTripulacion) = unaTripulacion.map({ pirata => pirata.items() }).flatten()
+  method cuantosItemsDistintosEntrePasados() = self.cuantosItemsDistintos(self.pasadosDeGrogXD())
+
+  // 5)c
+  method pasadoConMasDinero() = self.pirataConMasDinero(self.pasadosDeGrogXD())
+  method pirataConMasDinero(unaTripulacion) = unaTripulacion.max({ pirata => pirata.dinero() })
+
+
   method tieneAlMenos(unaCantidadDeTripulantes) = self.cantidadDePiratas() >= unaCantidadDeTripulantes
 
   method esVulnerableA(otroBarco) = otroBarco.tieneAlMenos(self.cantidadDePiratas() * 0.5)
@@ -72,7 +86,7 @@ class Pirata {
     dinero -= unaCantidad
   }
 
-
+  method items() = items
   method itemsMinimos(unaCantidad) = self.cantidadDeItems() >= 10
   method cantidadDeItems() = items.size()
   method tiene(unItem) = items.contains(unItem)
