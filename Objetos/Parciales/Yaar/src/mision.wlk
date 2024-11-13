@@ -23,7 +23,7 @@ class ConvertirseEnLeyenda inherits Mision {
 
   override method requisitoBarco(unBarco) = true
 }
-
+/* V1
 class Saqueo inherits Mision {
     const objetivo
     var monedasLimite
@@ -46,6 +46,32 @@ class CiudadCostera {
     method cantidadDeHabitantes() = habitantes.size()
 
     method seAnima(unPirata) = unPirata.nivelDeEbriedadMinimo(50)
+
+    method esVulnerableA(unBarco) = unBarco.todosPasadosDeGrogXD() || unBarco.tieneAlMenos(self.cantidadDeHabitantes() * 0.4)
+}
+*/
+class Saqueo inherits Mision {
+    const objetivo
+    var monedasLimite
+    method monedasLimite(nuevoLimiteDeMonedas) {
+      monedasLimite = nuevoLimiteDeMonedas
+    }
+
+    override method elPirataEsUtil(unPirata) = unPirata.tieneMenosDineroQue(monedasLimite) && unPirata.seAnimaASaquear(objetivo)
+
+    override method requisitoBarco(unBarco) = objetivo.esVulnerableA(unBarco)
+}
+
+
+
+class CiudadCostera {
+    const habitantes = []
+    method nuevoHabitante(nuevoHabitante) {
+        habitantes.add(nuevoHabitante)
+    }
+    method cantidadDeHabitantes() = habitantes.size()
+
+    method puedeSerSaqueadoPor(unPirata) = unPirata.nivelDeEbriedadMinimo(50)
 
     method esVulnerableA(unBarco) = unBarco.todosPasadosDeGrogXD() || unBarco.tieneAlMenos(self.cantidadDeHabitantes() * 0.4)
 }
