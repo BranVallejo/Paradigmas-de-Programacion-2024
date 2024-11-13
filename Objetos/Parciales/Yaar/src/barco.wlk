@@ -43,6 +43,11 @@ class Barco {
     tripulante => tripulante.estaPasadoDeGrogXD()
   })
 
+  //V2 del saqueo
+  method puedeSerSaqueadoPor(unPirata) = unPirata.estaPasadoDeGrogXD()
+  // Ahora la condicion de si el pirata es útil arranca desde el pirata, que le pregunta al objetivo (sea ciudad o barco si lo puede saquear). El objetivo es el que tiene sus condiciones.
+  //
+
   method pasadosDeGrogXD() = tripulacion.filter({ pirata => pirata.estaPasadoDeGrogXD() })
 
   // 5)a)
@@ -99,10 +104,16 @@ class Pirata {
   method subirEbriedad(unaCantidad) {
     nivelDeEbriedad += unaCantidad
   }
+  //V2 del saqueo
+
+  // Ahora la condicion de si el pirata es útil arranca desde el pirata, que le pregunta al objetivo (sea ciudad o barco si lo puede saquear). El objetivo es el que tiene sus condiciones.
+  method seAnimaASaquear(unObjetivo) = unObjetivo.puedeSerSaqueadoPor(self)
 }
+
 // 4) B)
 class EspiaDeLaCorona inherits Pirata {
   override method estaPasadoDeGrogXD() = false
+  override method seAnimaASaquear(unObjetivo) = unObjetivo.puedeSerSaqueadoPor(self) && self.tiene("permiso de la corona")
 }
 /*
 TODO: En ciudad.subirUnHabitante
