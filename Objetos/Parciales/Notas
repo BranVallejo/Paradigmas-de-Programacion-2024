@@ -4,30 +4,34 @@ Hechos:
 	Fiesta de disfraces
 	
 Siguientes:
-	Computadoras Pelado
-	Among us
-	Yaar
 	https://github.com/julian-berbel/intensamente
 	
 Por hacer:
 	Ver como resolver "intercambioDeTrajes" en FiestaDeDisfraces
 	Ver como funciona el sortBy
-	Descargar el git en la laptop de agos
-	ver para que es flatten(), aplanar
+	Agregar la pagina de cris acá
+	subir las notas al git y bajar todo en la laptop de Agos
+
 	
 
 Plan hoy general:
-	Yaar
 	Among us
 	Star Wars
 	
 Tener en mente:
+	https://www.wollok.org/documentation/language/#wollok.lang.Range
+	https://docs.google.com/document/d/e/2PACX-1vTlLkakSbp6ubcIq00PU4-Z96tg8CUSc8bO793_uftmiGjfkSn7Ug-F_y0-ieIWG6aWfuoHLJrRL8Fd/pub
 	* Si le pido un valor a un objeto para hacer cuentas, la estoy cagando
 	*  puedePagarCarga() Parece ser un método que devuelve un valor booleano, no que se use para validar y lanzar un error.
 	   validarDineroSuficiente/1 Un mejor nombre
     * Usá la sintaxis method unMetodo() = unValor sólo si es un método que devuelve, no para métodos que tienen efecto. 
         *  MAL: method pagarMultas() = usuarios.forEach({ usuario => usuario.pagarLasMultas() }) 
-	https://www.wollok.org/documentation/language/#wollok.lang.Range
+	* Si estoy haciendo objetos pero necesito algo en particular, que va a 
+	  hacer que se comporte diferente cada vez que lo uso, tiene que ser clase.
+	  Que se instancie con ese algo y lo use.
+	  Ej: estoy haciendo objetos y viene uno que necesita algo que puede cambiar.
+	  Quizas pienso erroneamente que se lo tengo que pasar por parametros
+	  Ej: sabotaje de impugnar voto en Among Us
 
 Métodos raros
 	unaDescripcion.endsWith("?")
